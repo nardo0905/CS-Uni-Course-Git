@@ -75,6 +75,12 @@ void solve(int *arr, int n) {
 
     int mergedArr[MAX_SIZE];
 
+    // for (int i = 0, j = 1; i < evenSize + oddSize; i+=2, j += 2) {
+
+    //     mergedArr[i] = 
+
+    // }
+
 }
 
 int main() {

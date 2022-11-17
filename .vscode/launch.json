@@ -5,7 +5,17 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": [],
+            "args": [
+
+                "-std=c++17",
+                "-pedantic",
+                "-Wall",
+                "-Wextra",
+                "-Werror",
+                "-Wshadow",
+                "-Wsign-conversion"
+
+            ],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
             "environment": [],
