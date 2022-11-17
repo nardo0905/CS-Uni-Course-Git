@@ -1,8 +1,36 @@
 #include <iostream>
-#include <cmath>
 #include <iomanip>
 
 const int MAX_SIZE = 1024;
+
+double sqrt(double num) {
+
+    double x1 = num / 2;
+    double epsilon = 1e-12;
+
+    while (x1 - (num / x1) > epsilon) {
+
+        x1 = (x1 + (num / x1)) / 2;
+
+    }
+
+    return x1;
+
+}
+
+double pow(int num, int exp) {
+
+    double result = 1;
+
+    for (int i = 0; i < exp; i++) {
+
+        result = result * num;
+
+    }
+
+    return result;
+
+}
 
 void fillArray(int *xArr, int *yArr, int size) {
 
@@ -61,7 +89,7 @@ int main() {
     double totalPathOne = findTotalPath(xCoordsOne, yCoordsOne, size1);
     double totalPathTwo = findTotalPath(xCoordsTwo, yCoordsTwo, size2);
 
-    if (totalPathOne != totalPathTwo) {
+    if (abs(totalPathOne - totalPathTwo) > 0.01) {
 
         std::cout << "false" << std::endl;
 
