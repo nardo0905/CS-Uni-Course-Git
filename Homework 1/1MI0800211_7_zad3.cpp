@@ -3,6 +3,7 @@
 
 const int MAX_SIZE = 1024;
 
+// Изплозвам Вавилонския метод за намиране на корен, което сме правили на семинарно упражнение
 double sqrt(double num) {
 
     double x1 = num / 2;
@@ -78,12 +79,24 @@ int main() {
 
     std::cout << "size1 > ";
     std::cin >> size1;
-    assert(size1 > 0 && size1 <= MAX_SIZE);
+    
+    if (size1 < 0 || size1 > MAX_SIZE) {
+
+        throw "Size must be between 0 and 1024";
+
+    }
+    
     fillArray(xCoordsOne, yCoordsOne, size1);
 
     std::cout << "size2 > ";
     std::cin >> size2;
-    assert(size2 > 0 && size2 <= MAX_SIZE);
+
+    if (size2 < 0 || size2 > MAX_SIZE) {
+
+        throw "Size must be between 0 and 1024";
+
+    }
+
     fillArray(xCoordsTwo, yCoordsTwo, size2);
 
     double totalPathOne = findTotalPath(xCoordsOne, yCoordsOne, size1);

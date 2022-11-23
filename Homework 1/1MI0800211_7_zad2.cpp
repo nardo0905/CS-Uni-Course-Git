@@ -7,7 +7,7 @@ bool isPrime (int n) {
     if (n <= 1) return false;
     if (n == 2) return true;
 
-    for (int i = 2; i < n; i++) {
+    for (int i = 2; i <= n / 2; i++) {
 
         if (n % i == 0) return false;
 
@@ -68,7 +68,11 @@ int main() {
     std::cout << "length > ";
     std::cin >> length;
 
-    assert(length > 0 && length <= MAX_SIZE);
+    if (length < 0 || length > MAX_SIZE) {
+
+        throw "Length must be between 0 and 1024";
+
+    }
 
     fillArray(arr, length);
     std::cout << solve(arr, length) << std::endl;

@@ -59,8 +59,6 @@ int compare(int num1, int num2) {
 
     return countDif;
 
-
-
 }
 
 void solve(int n, int k) {
@@ -96,7 +94,6 @@ void solve(int n, int k) {
 int main() {
 
     int n, k;
-    //std::cout << "Enter two numbers: ";
     std::cin >> n >> k;
 
     solve(abs(n), abs(k));
